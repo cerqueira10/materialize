@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <title>VASCÃO</title>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+
+    <body>
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+
+        <li><a href="#" onclick="$('html,body').animate({scrollTop: $('.servico').offset().top-50},2000)">Serviços</a></li>
+
+        <li><a href="#" onclick="$('html,body').animate({scrollTop: $('.equipe').offset().top-50},2000)">Equipe</a></li>
+
+        <li class="divider"></li>
+        <li><a href="#" onclick="$('html,body').animate({scrollTop: $('.localizacao').offset().top-50},2000)">Localizacao</a></li>
+        
+      </ul>
+
+      <div class="navbar-fixed">
+      <nav class="blue">
+        <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Vasco</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Calendario</a></li>
+        <li><a href="badges.html">Loja</a></li>
+        <li><a href="collapsible.html">Libertadores</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="slider fullscreen">
+    <ul class="slides">
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="text-slider">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="text-slider">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="text-slider">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="text-slider">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+      <h1>Hoje tem vascão</h1>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          $(".dropdown-button").dropdown();
+          $(".button-collapse").sideNav();
+          $(document).ready(function(){
+          $('.slider').slider();
+
+          var options = [
+          {selector: '.servico', offset: 50, callback: 'Materialize.fadeInImage(".servico")' },
+          {selector: '.equipe', offset: 50, callback: 'Materialize.fadeInImage(".equipe")' },
+          {selector: '.localizacao', offset: 50, callback: 'Materialize.fadeInImage(".localizacao")' },
+          {selector: '.contato', offset: 50, callback: 'Materialize.fadeInImage(".contato")' },
+          {selector: '.rodape', offset: 50, callback: 'Materialize.fadeInImage(".rodape")' },
+        ];
+        Materialize.scrollFire(options);
+
+        });
+      </script>
+      <!-- Serviços -->
+      <section class="espacamentoSuperior servico">
+        <div class="container">
+          <div class="row">
+            <div class= "col s12">
+              <h1 style="text-align: center;">Nossos Serviços</h1>
+              <p class="flow-text center-align">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
+            </div>
+            <div class="row">
+              <div class="col s12 m3 center-align">
+                <i class="large material-icons">language</i>
+                <p class="flow-text">Serviço1</p>
+                <a class="waves-effect waves-light btn">Veja mais</a>
+
+              </div>
+              <div class="col s12 m3 center-align">
+                <i class="large material-icons">person</i>
+                <p class="flow-text">Serviço2</p>
+                <a class="waves-effect waves-light btn">Veja mais</a>
+
+            </div>
+            <div class="col s12 m3 center-align">
+              <i class="large material-icons">mail</i>
+                <p class="flow-text">Serviço3</p>
+                <a class="waves-effect waves-light btn">Veja mais</a>
+
+          </div>
+          <div class="col s12 m3 center-align">
+            <i class="large material-icons">star</i>
+                <p class="flow-text">Serviço4</p>
+                <a class="waves-effect waves-light btn">Veja mais</a>
+
+        </div>
+      </section>
+      <!-- Equipe -->
+      <section class="equipe grey text-lighten-2">
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+              <h2 class="center-align">Nossa Equipe</h2>
+              <p class="flow-text center-align">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+
+              <div class="row center-align">
+
+                  <div class="col s12 m4">
+                     <div class="card">
+                        <div class="card-image">
+                          <img src="img/pessoa1.jpg">
+                          <span class="card-title">Mister</span>
+                        </div>
+                        <div class="card-content">
+                          <p class="flow-text">Programador</p>
+                        </div>
+                        <div class="card-action">
+                          <a href="#">Veja mais...</a>
+                        </div>
+                      </div>                
+                  </div>
+
+                   <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                          <img src="img/pessoa1.jpg">
+                          <span class="card-title">Mister</span>
+                        </div>
+                        <div class="card-content">
+                          <p class="flow-text">Programador</p>
+                        </div>
+                        <div class="card-action">
+                          <a href="#">Veja mais...</a>
+                        </div>
+                      </div>   
+                    </div>
+
+                   <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                          <img src="img/pessoa1.jpg">
+                          <span class="card-title">Mister</span>
+                        </div>
+                        <div class="card-content">
+                          <p class="flow-text">Programador</p>
+                        </div>
+                        <div class="card-action">
+                          <a href="#">Veja mais...</a>
+                        </div>
+                      </div>   
+                  </div>
+           </section>
+                  <!-- Localização -->
+                  <section class="localizacao">
+                    <div class="container">
+                      <div class="row">
+                        <h2 class="center-align">Localização</h2>
+                        <p class="flow-text center-align">Onde nos encontrar</p>
+                      </div>
+
+                      <div class="row">
+                        <div class="col s12 m8">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.098524471481!2d-45.42811058544079!3d-23.636642384645537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cd631551d2d585%3A0xbe6efd4b81fb3cd0!2sInstituto+Federal+de+Educa%C3%A7%C3%A3o%2C+Ci%C3%AAncia+e+Tecnologia+de+S%C3%A3o+Paulo%2C+Campus+Caraguatatuba!5e0!3m2!1spt-PT!2sbr!4v1521136656260" width="100%" height="450" frameborder="0" style="border:0" class="z-depth-5" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="col s12 m4">
+                          <div class="chip chip-custom">
+                             Tag
+                             <i class="close material-icons"></i>
+                          </div>
+                        </div>
+
+                        <div class="col s12 m4">
+
+                          <div class="chip chip-custom">
+                            Av. Bahia, 1739 - Indaiá
+                            <i class="material-icons">location_on</i>
+                          </div>
+
+                          <div class="chip chip-custom">
+                            Caraguatatuba
+                            <i class="material-icons">location_on</i>
+                          </div>
+
+                          <div class="chip chip-custom">
+                            São Paulo
+                            <i class="material-icons">location_on</i>
+                          </div>
+
+                          <div class="chip chip-custom">
+                            +55 12 3885-2130
+                            <i class="material-icons">call</i>
+                          </div>
+                        </div>
+                  </section>
+                  <!-- Fale Conosco -->
+                  <section class="contato grey darken-3 white-text" style="margin-top:44px;">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col s12">
+                          <h2 class="center-align">Fale Conosco</h2>
+                          <p class="flow-text center-align">
+                            Preencha o formulário para entrar em contato.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                        <div class="row">
+                            <form class="col s12">
+                              <div class="row">
+                                <div class="input-field col s6">
+                                  <input id="first_name" type="text" class="validate">
+                                  <label for="first_name">Primeiro Nome</label>
+                                </div>
+                                <div class="input-field col s6">
+                                  <input id="last_name" type="text" class="validate">
+                                  <label for="last_name">Ultimo nome</label>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="input-field col s12">
+                                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                  <label for="textarea1">Mensagem</label>
+                                </div>
+                              </div>
+                              </div>
+                              <div class="row">
+                                <div class="col s12 center-align">
+                                  <button type="submit" class="waves-effect waves-light btn-large">Enviar</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                  </section>
+
+                  <!-- Footer -->
+                  <footer class="page-footer blue-grey darken-2 rodape">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col l6 s12">
+                          <h5 class="white-text">Sobre o vasco</h5>
+                          <p class="grey-text text-lighten-4">Melhor dos melhores</p>
+                        </div>
+                        <div class="col l4 offset-l2 s12">
+                          <h5 class="white-text">Links</h5>
+                          <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">História</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Títulos</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">São Januário</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Ingressos</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="footer-copyright">
+                      <div class="container">
+                      © 2018 Copyright Gabriel Cerqueira Santos
+                      <a class="grey-text text-lighten-4 right" href="#!">MEC MEC</a>
+                      </div>
+                    </div>
+                </footer>
+
+                <!--JQuery before materialize.js -->
+                <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+    </body>
+  </html>
